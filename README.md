@@ -1,85 +1,60 @@
 # Hospital Navigation
-This project is a simple, menu‑driven, command‑line “hospital navigation system” that helps patients find the right department based on their symptoms and view an overview of the hospital layout.[4]
+This project is a simple, menu-driven command-line hospital navigation system that helps patients find the right department based on their symptoms and view an overview of the hospital layout.
 
-## Project Overview
+# Overview of the Project
 
-This application simulates a hospital information desk that maps common symptoms or diseases to appropriate hospital departments and floors, and then prints clear directions for the patient. It runs entirely in the terminal and uses a text menu to guide user interaction.[4]
+This application is a simulation of a hospital information desk. It maps common symptoms or diseases to the right department and floor in a hospital and provides directions for the patient. It runs completely in a terminal and uses a text-based menu to guide user interaction.
 
-## Features
+# Overview Features
 
-- Maps patient symptoms (like “chest pain” or “headache”) to a suitable specialty department (Cardiology, Neurology, Orthopedics, etc.).[4]
-- Displays hospital layout with floors, departments, rooms, and common issues treated in each department.  
-- Provides step‑by‑step directions (including elevator instructions) to reach the chosen department from the ground floor.
+- Maps patient symptoms, such as "chest pain" or "headache," to an appropriate specialty department, such as Cardiology, Neurology, or Orthopedics.
+- It shows the layout of a hospital: floors, departments, rooms, and common issues that each department can treat.
 
-## Project Structure
+Provides step-by-step instructions inclusive of elevator directions to get from the ground floor to a desired department.
 
-- `HospitalNavigation` class  
-  - `__init__`: Defines floors, departments, rooms, and common diseases/symptoms.  
-  - `find_department(disease_input)`: Matches user input against known disease keywords and returns the appropriate floor and department data.  
-  - `display_hospital_info()`: Prints a summarized list of all floors, departments, and key rooms, along with example conditions.  
-  - `get_patient_directions()`: Main loop presenting the menu (find department, view all departments, exit) and handling user choices.  
-  - `_handle_disease_search()`: Prompts the user for symptoms, finds the department, and prints detailed directions and room information.  
-- `main()`: Creates a `HospitalNavigation` instance and starts the interaction loop.  
-- `if __name__ == "__main__": main()`: Entry point when the script is run directly.
+# Project Structure
+- HospitalNavigation class
+- _init_: Defines floors, departments, rooms and common diseases or symptoms.
+find_department(disease_input): The function takes in the user's input, matches it with the keywords of known diseases, and returns corresponding floor and department information.
+- display_hospital_info(): Prints out a summarized list of all floors, departments, and key rooms along with example conditions.
+- get_patient_directions: Main loop that displays the menu for finding a department, viewing all departments, or exiting, and processes user choices.
+- _handle_disease_search(): Asks for symptoms from the user, finds the department, and prints the detailed directions along with room information.
 
-## Requirements
+- main: Creates an instance of HospitalNavigation and begins the interaction loop.
 
-- Python 3.x installed on your system.  
-- No external libraries are required; the script uses only standard Python functionality.
+- if _name_ == "_main_": main(): Entry point when script runs directly.
+
+# Requirements
+
+- Python 3.x installed on your system.
+
+- No external libraries are needed; the script uses only standard Python functionality.
 
 ## How to Run
 
-1. Save the code to a file, for example:
+1. Save the code to a file, for instance:
+hospital_navigation.py
 
-   ```bash
-   hospital_navigation.py
-   ```
+2. Open a terminal or command prompt in the directory where you saved the file.
+3. Run:python hospital_navigation.py
 
-2. Open a terminal/command prompt in the directory containing the file.
+4. Follow the on-screen menu:
 
-3. Run:
+- Press 1 for entering symptoms and getting directions to the right department.
 
-   ```bash
-   python hospital_navigation.py
-   ```
+- Press 2 for all hospital departments and floors.
+- Press 3 to exit the program.
+Usage Example
+- Type 1.
 
-4. Follow the on‑screen menu:
-
-   - Press `1` to enter symptoms and get directions to the right department.  
-   - Press `2` to view all hospital departments and floors.  
-   - Press `3` to exit the program.
-
-## Usage Example
-
-- Choose option `1`.  
 - When prompted, type something like:
 
-  ```text
-  chest pain
-  ```
+chest pain- The system will match this to the Cardiology department and display:
 
-- The system will match this to the Cardiology department and show:
+The floor, for example: “1st Floor.” 
+Department name : Cardiology. - Available rooms on that floor - Common conditions treated there. - Directions to reach the floor and department from the ground floor.
+## Customization You can easily modify the system to match a real hospital by: - Add or edit floors and departments in self.departments inside _init_ - Updating lists to include the room numbers and services actually available. - Extending disease lists for every department in support of disease-to-department matching. This makes the script a simple starting point for educational demos, prototypes of hospital kiosks, or beginner Python projects.
 
-  - The floor (e.g., “1st Floor”).  
-  - Department name (Cardiology).  
-  - Available rooms on that floor.  
-  - Common conditions treated there.  
-  - Directions to reach the floor and department from the ground floor.[4]
-
-## Customization
-
-You can easily adapt the system to match a real hospital by:
-
-- Adding or editing floors and departments in `self.departments` inside `__init__`.  
-- Updating `rooms` lists to reflect actual room numbers and services.  
-- Extending `diseases` lists for each department to improve disease‑to‑department matching.[4]
-
-This makes the script a simple starting point for educational demos, prototypes of hospital kiosks, or beginner Python projects.
-
-[1](https://www.ncbi.nlm.nih.gov/books/NBK559312/)
-[2](https://www.scribd.com/document/795222806/C-Hospital-design-project)
-[3](https://inivos.com/5-most-common-hospital-acquired-infections-hais/)
-[4](https://hospi.info/departments-of-hospital/)
 [5](https://en.wikipedia.org/wiki/Hospital-acquired_infection)
 [6](https://en.wikipedia.org/wiki/Hospital)
 [7](https://emedicine.medscape.com/article/967022-overview)
